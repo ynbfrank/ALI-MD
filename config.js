@@ -33,7 +33,7 @@ REJECT_MSG: process.env.REJECT_MSG || "*📞 ᴄαℓℓ ɴσт αℓℓσωє�
 // make anti link true,false for groups 
 MENTION_REPLY: process.env.MENTION_REPLY || "false",
 // make true if want auto voice reply if someone menetion you 
-ALIVE_IMG: getConfig("ALIVE_IMG") || "https://cdn.ironman.my.id/i/2du3i5.jpg",
+ALIVE_IMG: getConfig("ALIVE_IMG") || "https://qu.ax/zrqFX.jpg",
 // add custom menu image url
 PREFIX: getConfig("PREFIX") || ".", 
 // add your prifix for bot   
