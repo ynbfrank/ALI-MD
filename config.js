@@ -26,8 +26,10 @@ GOODBYE: process.env.GOODBYE || "true",
 // true if want goodbye msg in groups 
 ADMIN_EVENTS: process.env.ADMIN_EVENTS || "false",
 // make true to know who dismiss or promoted a member in group
-ANTI_LINK: process.env.ANTI_LINK || "false",
-//anticall integration 
+ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "false",
+ANTI_LINK_WARN: process.env.ANTI_LINK_WARN || "false",
+ANTI_LINK_DELETE: process.env.ANTI_LINK_DELETE || "false",
+// make anti link true,false for groups
 ANTI_CALL: getConfig("ANTI_CALL") || "true",
 REJECT_MSG: process.env.REJECT_MSG || "*📞 ᴄαℓℓ ɴσт αℓℓσωє∂ ιɴ тнιѕ ɴᴜмвєʀ уσυ ∂σɴт нανє ᴘєʀмιѕѕισɴ 📵*",
 // make anti link true,false for groups 
@@ -64,12 +66,7 @@ ANTI_BAD_WORD: process.env.ANTI_BAD_WORD || "false",
 ANTI_BOT: process.env.ANTI_BOT || "true",
 MODE: getConfig("MODE") || "public",
 // make bot public-private-inbox-group 
-ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "false",
-// make anti link true,false for groups 
 ANTIVIEW_ONCE: process.env.ANTIVIEW_ONCE || "off",
-ANTI_LINK_WARN: process.env.ANTILINK_WARN || "false",
-ANTI_LINK_KICK: process.env.ANTILINK_KICK || "false",
-ANTI_LINK_DELETE: process.env.ANTI_LINK_DELETE || "false",
 AUTO_VOICE: process.env.AUTO_VOICE || "false",
 // make true for send automatic voices
 AUTO_STICKER: process.env.AUTO_STICKER || "false",
