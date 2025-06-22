@@ -1,7 +1,4 @@
-const { getConfig } = require("./lib/configdb");
 const fs = require('fs');
-const path = require('path');
-
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
 function convertToBool(text, fault = 'true') {
@@ -10,7 +7,7 @@ function convertToBool(text, fault = 'true') {
 module.exports = {
 SESSION_ID: process.env.SESSION_ID || "",  
 //chatbot integration 
-CHATBOT: getConfig("CHATBOT") || "on",
+CHATBOT: process.env.CHATBOT || "on",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 // make true or false status auto seen
@@ -30,16 +27,16 @@ ANTI_LINK_KICK: process.env.ANTI_LINK_KICK || "false",
 ANTI_LINK_WARN: process.env.ANTI_LINK_WARN || "false",
 ANTI_LINK_DELETE: process.env.ANTI_LINK_DELETE || "false",
 // make anti link true,false for groups
-ANTI_CALL: getConfig("ANTI_CALL") || "true",
+ANTI_CALL: process.env.ANTI_CALL || "true",
 REJECT_MSG: process.env.REJECT_MSG || "*📞 ᴄαℓℓ ɴσт αℓℓσωє∂ ιɴ тнιѕ ɴᴜмвєʀ уσυ ∂σɴт нανє ᴘєʀмιѕѕισɴ 📵*",
 // make anti link true,false for groups 
 MENTION_REPLY: process.env.MENTION_REPLY || "false",
 // make true if want auto voice reply if someone menetion you 
-ALIVE_IMG: getConfig("ALIVE_IMG") || "https://qu.ax/zrqFX.jpg",
+ALIVE_IMG: process.env.ALIVE_IMG || "https://qu.ax/zrqFX.jpg",
 // add custom menu image url
-PREFIX: getConfig("PREFIX") || ".", 
+PREFIX: process.env.PREFIX || ".", 
 // add your prifix for bot   
-BOT_NAME: getConfig("BOT_NAME") || "ALI-MD",
+BOT_NAME: process.env.BOT_NAME || "ALI-MD",
 // add bot namw here for menu
 STICKER_NAME: process.env.STICKER_NAME || "ALI-MD",    
 VPS: process.env.VPS || "",
@@ -64,7 +61,7 @@ AUTO_REACT: process.env.AUTO_REACT || "false",
 ANTI_BAD_WORD: process.env.ANTI_BAD_WORD || "false",
 // false or true for anti bad words 
 ANTI_BOT: process.env.ANTI_BOT || "true",
-MODE: getConfig("MODE") || "public",
+MODE: process.env.MODE || "public",
 // make bot public-private-inbox-group 
 ANTIVIEW_ONCE: process.env.ANTIVIEW_ONCE || "off",
 AUTO_VOICE: process.env.AUTO_VOICE || "false",
